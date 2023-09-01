@@ -1,3 +1,5 @@
+## For the hosted link the link is https://goorbank.onrender.com/
+
 ## Run npm install in your terminal to download all node modules after successful clone of git repository
 
 ## Run npm start to start the Server 
@@ -23,3 +25,11 @@
 ## Endpoint 2 http://localhost:7000/resolve/:accountNumber , the accountNumber should be the accountNumber you are looking for  in the database
 
 ## Endpoint 3 http://localhost:7000/retrieve this will retrieve all accounts
+
+## For the hosted link the link is https://goorbank.onrender.com/
+
+For the first enpoinnt use the link /create this is a post request so you wont find any data
+
+for the second enpoint use the link above /resolve/accountnumber please do not add :
+
+for the third endpoint which returns all account use the link above /retrieve
