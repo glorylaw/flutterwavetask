@@ -7,10 +7,8 @@ const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const cors_1 = __importDefault(require("cors"));
-const accountRoute_1 = __importDefault(require("./route/accountRoute"));
 const config_1 = require("./config");
-const dotenv_1 = __importDefault(require("dotenv"));
-dotenv_1.default.config();
+const accountRoute_1 = __importDefault(require("./route/accountRoute"));
 config_1.db.sync().then(() => {
     console.log("db connected successfully");
 }).catch(err => {
@@ -22,6 +20,7 @@ app.use((0, morgan_1.default)("dev"));
 app.use((0, cookie_parser_1.default)());
 app.use((0, cors_1.default)());
 app.use('/', accountRoute_1.default);
-app.listen(config_1.port, () => {
-    console.log(`Server running on ${config_1.URL}:${config_1.port}`);
+const port = 7000;
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
