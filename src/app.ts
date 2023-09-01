@@ -2,8 +2,10 @@ import express from "express";
 import logger from "morgan";
 import cookieParser from "cookie-parser";
 import cors from "cors"
-import{db} from "./config"
 import accountRoutes from './route/accountRoute';
+import {URL, port,db} from './config'
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 db.sync().then(()=>{
@@ -24,7 +26,6 @@ app.use('/', accountRoutes);
 
 
 
-const port = 7000
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+app.listen(port, ()=>{
+    console.log(`Server running on ${URL}:${port}`)
+})
