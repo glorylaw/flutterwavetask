@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const accountModel_1 = require("../model/accountModel");
 const chance_1 = __importDefault(require("chance"));
-const validation_1 = require("../middleware/validation");
+const validation_1 = require("../utils/validation");
 class AccountController {
     createAccount(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -22,7 +22,7 @@ class AccountController {
                 const { holderName, dateOfBirth, accountType, initialBalance } = req.body;
                 const chance = new chance_1.default();
                 const accountNo = chance.natural({ min: 3000000000, max: 3099999999 });
-                // const integerAccountNumber = Math.floor(accountNo);
+                //validate input
                 const validateResult = validation_1.Schema.validate(req.body, validation_1.option);
                 if (validateResult.error) {
                     return res.status(400).json({

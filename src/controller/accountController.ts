@@ -1,7 +1,7 @@
 import { Request, Response , NextFunction} from 'express';
 import { Account } from '../model/accountModel';
 import Chance from 'chance';
-import {Schema,option}from '../middleware/validation';
+import {Schema,option}from '../utils/validation';
 
 
 class AccountController {
@@ -12,8 +12,8 @@ class AccountController {
       const { holderName, dateOfBirth, accountType, initialBalance } = req.body;
       const chance = new Chance()
       const accountNo = chance.natural({min: 3000000000, max: 3099999999})
-      // const integerAccountNumber = Math.floor(accountNo);
-
+      
+      //validate input
       const validateResult = Schema.validate(req.body, option);
 
       if (validateResult.error) {
