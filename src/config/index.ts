@@ -7,7 +7,3 @@ export const db = new Sequelize("app","","",{
     dialect:"sqlite",
     logging:false
 })
-
-export const port = process.env.PORT || 7000;
-
-export const URL = process.env.URL as string;
