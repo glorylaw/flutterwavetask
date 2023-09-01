@@ -1,7 +1,6 @@
-import { Router } from 'express';
+import { Router,Request, Response } from 'express';
 import AccountController from '../controller/accountController';
 
-import { Request, Response } from 'express';
 
 const router: Router = Router();
 const accountController = new AccountController();
