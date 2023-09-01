@@ -30,6 +30,6 @@ for the third endpoint which returns all account add  /retrieve to the above lin
 
 }
 
-## Endpoint 2 http://localhost:7000/resolve/:accountNumber , the accountNumber should be the accountNumber you are looking for  in the database
+## Endpoint 2 http://localhost:7000/resolve/accountNumber , the accountNumber should be the accountNumber you are looking for  in the database
 
 ## Endpoint 3 http://localhost:7000/retrieve this will retrieve all accounts
