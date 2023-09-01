@@ -1,6 +1,8 @@
 ## Run npm install in your terminal to download all node modules after successful clone of git repository
 
-## Run npm start to start the Server and also watch for error
+## Run npm start to start the Server 
+
+## Run npm run complie to watch for errors in a seperate terminal
 
 
 ## Once you see "db connected successful" on your terminal as well as Server is running on port 7000 you can start testing
